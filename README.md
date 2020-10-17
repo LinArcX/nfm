@@ -3,7 +3,7 @@
 </h4>
 
 # nfm
-Neo file manager written by PDCurses library.
+Neo file manager written by PDCurses library for windows.
 
 # Build
 You have two options:
@@ -16,7 +16,7 @@ You have two options:
 
     2.4. `nmake.exe .\Makefile.win`
 
-        It will create __nfm.exe__ in _release_ directory.
+    It will create __nfm.exe__ in _release_ directory.
 
     Tip: If you don't have visual-studio command prompt or prefer to stay in your current pwsh, you can prepare `cl.exe` via this command:
 
