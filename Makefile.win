@@ -1,0 +1,31 @@
+# Specify compiler
+CC=cl.exe
+
+# Specify linker
+LINK=link.exe
+
+#.PHONY: all release debug clean
+
+# Build all target
+all : release
+
+# Link the object files and dependent libraries into a binary
+release : nfm.o
+	$(LINK) /OUT:.\release\nfm.exe .\release\nfm.o
+
+debug : nfm_d.o
+	$(LINK) /OUT:.\debug\nfm.exe .\debug\nfm_d.o
+
+# Compile the source files into object files
+nfm.o : .\core\nfm.c
+	mkdir release
+	$(CC) /I ".\libs\PDCurses" /c .\core\nfm.c /Fo.\release\nfm.o /link /LIBPATH:.\libs\lib
+
+nfm_d.o : .\core\nfm.c
+	mkdir debug
+	$(CC) /I ".\libs\PDCurses" /Z7 /c .\core\nfm.c /Fo.\debug\nfm_d.o /link /LIBPATH:.\libs\lib
+
+# Clean target
+clean :
+	del .\debug\nfm_d.o .\debug\nfm.exe
+	del .\release\nfm.o .\release\nfm.exe

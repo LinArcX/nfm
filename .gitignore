@@ -1,0 +1,27 @@
+# Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
+garbages/*
+
+debug/*
+release/*
+
+vs/*.suo
+vs/*.user
+vs/*.rsuser
+vs/*.userosscache
+vs/*.sln.docstates
+vs/.vs/*
+vs/Debug/*
+vs/Release/*
+
+vs/x64/
+vs/x86/
+vs/bld/
+vs/[Bb]in/
+vs/[Oo]bj/
+vs/[Ll]og/
+vs/[Dd]ebug/
+vs/[Dd]ebugPublic/
+vs/[Rr]elease/
+vs/[Rr]eleases/
+vs/[Aa][Rr][Mm]/
+vs/[Aa][Rr][Mm]64/
